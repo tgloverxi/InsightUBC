@@ -1,0 +1,15 @@
+{
+    "query13": "query with 2 elements in apply",
+    "query12": "only condition",
+    "query11": "empty query only none",
+    "query10": "empty query only any",
+    "query9": "query only apply",
+    "query8": "query only dir",
+    "query7": "query no apply",
+    "query6": "empty query",
+    "query5": "complex with no transformation",
+    "query4": "complex with not or",
+    "query3": "complex with not",
+    "query2": "complex example",
+    "query1": "simple query IS comparison for department with two columns and old order syntax"
+}

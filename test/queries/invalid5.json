@@ -1,0 +1,51 @@
+{
+    "title": "SELECT shortname, max of seats WHERE applying two APPLY key with same name which is invalid",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "rooms_furniture": "*Tables*"
+                    }
+                },
+                {
+                    "GT": {
+                        "rooms_seats": 100
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname",
+                "avgSeats",
+                "avgSeats"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "avgSeats"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_shortname"
+            ],
+            "APPLY": [
+                {
+                    "avgSeats": {
+                        "AVG": "rooms_seats"
+                    }
+                },
+                {
+                    "avgSeats": {
+                        "COUNT": "rooms_number"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": []
+}

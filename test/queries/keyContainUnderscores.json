@@ -1,0 +1,19 @@
+{
+    "title": "dataset key contain underscores",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg_":97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept_",
+                "courses_avg_"
+            ],
+            "ORDER": "courses_avg_"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

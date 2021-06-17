@@ -1,0 +1,19 @@
+{
+    "title": "key value in IS, empty string",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_dept": "" 
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_year",
+                "courses_title"
+            ],
+            "ORDER": "courses_year"
+        }
+    },
+    "isQueryValid": true,
+    "result":[]
+}

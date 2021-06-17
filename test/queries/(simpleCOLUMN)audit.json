@@ -1,0 +1,18 @@
+{
+    "title": "SELECT audit WHERE audit is 10 ",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "courses_audit": 10
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_audit"
+            ],
+            "ORDER": "courses_audit"
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_audit":10},{"courses_audit":10},{"courses_audit":10},{"courses_audit":10},{"courses_audit":10}]
+}

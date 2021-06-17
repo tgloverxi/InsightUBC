@@ -1,0 +1,19 @@
+{
+    "title": "number overflow",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg":9007199254740999
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": []
+}

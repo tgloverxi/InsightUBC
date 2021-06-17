@@ -1,0 +1,32 @@
+{
+    "title": "",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "rooms_seats": 350
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname",
+                "rooms_seats"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "rooms_seats"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_shortname",
+                "rooms_seats"
+            ],
+            "APPLY": [
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_shortname":"WOOD","rooms_seats":503},{"rooms_shortname":"OSBO","rooms_seats":442},{"rooms_shortname":"CIRS","rooms_seats":426},{"rooms_shortname":"HEBB","rooms_seats":375}]
+}

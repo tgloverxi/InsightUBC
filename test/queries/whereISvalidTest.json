@@ -1,0 +1,19 @@
+{
+    "title": "SELECT year, title WHERE title IS harmonic anal i",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_title": "harmonic anal i"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_year",
+                "courses_title"
+            ],
+            "ORDER": "courses_year"
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_year":1900,"courses_title":"harmonic anal i"},{"courses_year":1900,"courses_title":"harmonic anal i"},{"courses_year":1900,"courses_title":"harmonic anal i"},{"courses_year":1900,"courses_title":"harmonic anal i"},{"courses_year":2008,"courses_title":"harmonic anal i"},{"courses_year":2010,"courses_title":"harmonic anal i"},{"courses_year":2012,"courses_title":"harmonic anal i"},{"courses_year":2015,"courses_title":"harmonic anal i"}]
+}

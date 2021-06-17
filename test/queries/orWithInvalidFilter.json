@@ -1,0 +1,32 @@
+{
+    "title": "OR mess up filter",
+    "query": {
+        "WHERE": {
+            "OR":[
+                {
+                    "courses_avg":90
+                },
+                {
+                    "IS": {
+                        "courses_dept":"adhe"
+                    }
+                },
+                {
+                    "LT": {
+                        "courses_year": 2015
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

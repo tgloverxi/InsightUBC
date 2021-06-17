@@ -1,0 +1,46 @@
+{
+    "title": "test AVG with null room fields",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "rooms_furniture": "*Tables*"
+                    }
+                },
+                {
+                    "GT": {
+                        "rooms_lat": -15.284924999999999
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_lat",
+                "maxSeats"
+            ],
+            "ORDER": {
+                "dir": "UP",
+                "keys": [
+                    "rooms_lat",
+                    "maxSeats"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_lat"
+            ],
+            "APPLY": [
+                {
+                    "maxSeats": {
+                        "SUM": "rooms_lon"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_lat":49.26044,"maxSeats":-985.99},{"rooms_lat":49.26047,"maxSeats":-246.49},{"rooms_lat":49.26048,"maxSeats":-1109.24},{"rooms_lat":49.26114,"maxSeats":-2095.25},{"rooms_lat":49.26125,"maxSeats":-616.24},{"rooms_lat":49.26176,"maxSeats":-1109.25},{"rooms_lat":49.26228,"maxSeats":-492.99},{"rooms_lat":49.26229,"maxSeats":-1355.68},{"rooms_lat":49.26236,"maxSeats":-369.73},{"rooms_lat":49.26273,"maxSeats":-739.49},{"rooms_lat":49.26274,"maxSeats":-123.25},{"rooms_lat":49.26293,"maxSeats":-2711.59},{"rooms_lat":49.26398,"maxSeats":-2588.32},{"rooms_lat":49.264,"maxSeats":-862.79},{"rooms_lat":49.26414,"maxSeats":-123.25},{"rooms_lat":49.2642,"maxSeats":-739.49},{"rooms_lat":49.2643,"maxSeats":-369.77},{"rooms_lat":49.26478,"maxSeats":-1602.21},{"rooms_lat":49.26479,"maxSeats":-369.76},{"rooms_lat":49.26486,"maxSeats":-3451.1},{"rooms_lat":49.26541,"maxSeats":-123.25},{"rooms_lat":49.26545,"maxSeats":-493.02},{"rooms_lat":49.26605,"maxSeats":-862.79},{"rooms_lat":49.2661,"maxSeats":-493.01},{"rooms_lat":49.26627,"maxSeats":-369.76},{"rooms_lat":49.266463,"maxSeats":-369.77},{"rooms_lat":49.2666,"maxSeats":-246.51},{"rooms_lat":49.26766,"maxSeats":-2095.29},{"rooms_lat":49.26767,"maxSeats":-369.77},{"rooms_lat":49.26826,"maxSeats":-4190.66},{"rooms_lat":49.2683,"maxSeats":-369.75},{"rooms_lat":49.26862,"maxSeats":-246.5},{"rooms_lat":49.26867,"maxSeats":-369.77},{"rooms_lat":49.26958,"maxSeats":-369.77},{"rooms_lat":49.2699,"maxSeats":-616.27},{"rooms_lat":49.27106,"maxSeats":-246.5}]
+}

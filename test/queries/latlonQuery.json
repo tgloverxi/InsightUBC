@@ -1,0 +1,35 @@
+{
+    "title": "check lat lon",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "rooms_furniture": "*Tables*"
+                    }
+                },
+                {
+                    "GT": {
+                        "rooms_seats": 300
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname",
+                "rooms_name",
+                "rooms_lat",
+                "rooms_lon"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "rooms_shortname"
+                ]
+            }
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_shortname":"OSBO","rooms_name":"OSBO_A","rooms_lat":49.26047,"rooms_lon":-123.24467},{"rooms_shortname":"LSC","rooms_name":"LSC_1001","rooms_lat":49.26236,"rooms_lon":-123.24494},{"rooms_shortname":"LSC","rooms_name":"LSC_1002","rooms_lat":49.26236,"rooms_lon":-123.24494},{"rooms_shortname":"HEBB","rooms_name":"HEBB_100","rooms_lat":49.2661,"rooms_lon":-123.25165}]
+}

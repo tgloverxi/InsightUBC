@@ -1,0 +1,19 @@
+{
+    "title": "SELECT dept, avg WHERE avg = 97",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "courses_fail":97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_dept":"math","courses_avg":61.03},{"courses_dept":"chem","courses_avg":68.87},{"courses_dept":"chem","courses_avg":72.66}]
+}

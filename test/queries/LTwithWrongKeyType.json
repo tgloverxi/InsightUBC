@@ -1,0 +1,19 @@
+{
+    "title": "wrong key type in LT",
+    "query": {
+        "WHERE": {
+            "LT": {
+                "courses_dept": "math"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

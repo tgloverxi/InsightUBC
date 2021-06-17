@@ -1,0 +1,23 @@
+{
+    "title": "filter with more than one comparison",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg":97
+            },
+            "EQ": {
+                "courses_avg":97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

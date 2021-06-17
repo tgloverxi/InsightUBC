@@ -1,0 +1,20 @@
+{
+    "title": "OPTIONS contain WHERE",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg":97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg",
+            "WHERE": {}
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

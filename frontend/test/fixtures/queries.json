@@ -1,0 +1,265 @@
+{
+       "query13": {
+        "WHERE": {
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+            ],
+            "APPLY": [
+                {
+                    "a": {
+                        "SUM": "courses_instructor"
+                    }},
+                {"b": {
+                        "COUNT": "courses_pass"
+                    }
+                }
+            ]
+        }
+    },
+    "query12": {
+        "WHERE": {
+            "EQ": {
+                "courses_id": "899"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+            ]
+        }
+    },
+    "query11": {
+        "WHERE": {
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+            ]
+        }
+    },
+    "query10": {
+        "WHERE": {
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+            ]
+        }
+    },
+    "query9": {
+        "WHERE": {
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+            ],
+            "APPLY": [
+                {
+                    "countFail": {
+                        "COUNT": "courses_fail"
+                    }
+                }
+            ]
+        }
+    },
+    "query8": {
+        "WHERE": {
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                ]
+            }
+        }
+    },
+    "query7": {
+        "WHERE": {
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_audit",
+                "courses_id"
+            ],
+            "APPLY": [
+            ]
+        }
+    },
+    "query6": {
+        "WHERE": {
+        },
+        "OPTIONS": {
+            "COLUMNS": []
+        }
+    },
+    "query5": {
+        "WHERE": {
+            "NOT": {
+                "IS": {
+                     "rooms_furniture": "*Tables*"
+                }
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "rooms_shortname"
+                ]
+            }
+        }
+    },
+    "query4": {
+        "WHERE": {
+            "NOT": {
+                "OR": [
+                    {
+                        "IS": {
+                            "rooms_furniture": "*Tables*"
+                        }
+                    },
+                    {
+                        "LT": {
+                            "rooms_seats": 300
+                        }
+                    }
+                ]
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname",
+                "maxSeats",
+                "avgSeats"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "rooms_shortname",
+                    "maxSeats"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_shortname"
+            ],
+            "APPLY": [
+                {
+                    "maxSeats": {
+                        "MAX": "rooms_seats"
+                    }},
+                {"avgSeats": {
+                        "AVG": "rooms_seats"
+                    }
+                }
+            ]
+        }
+    },
+    "query3": {
+        "WHERE": {
+            "OR": [
+                {
+                    "NOT":
+                    {"IS": {
+                        "rooms_furniture": "*Tables*"
+                    }}
+                },
+                {
+                    "GT": {
+                        "rooms_seats": 300
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname",
+                "maxSeats",
+                "avgSeats"
+            ],
+            "ORDER": {
+                "dir": "UP",
+                "keys": [
+                    "rooms_shortname",
+                    "maxSeats"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_shortname"
+            ],
+            "APPLY": [
+                {
+                    "maxSeats": {
+                        "MAX": "rooms_seats"
+                    }},
+                {"avgSeats": {
+                        "AVG": "rooms_seats"
+                    }
+                }
+            ]
+        }
+    },
+    "query2": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "rooms_furniture": "*Tables*"
+                    }
+                },
+                {
+                    "GT": {
+                        "rooms_seats": 300
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname",
+                "maxSeats",
+                "avgSeats"
+            ],
+            "ORDER": {
+                "dir": "UP",
+                "keys": [
+                    "rooms_shortname",
+                    "maxSeats"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_shortname"
+            ],
+            "APPLY": [
+                {
+                    "maxSeats": {
+                        "MAX": "rooms_seats"
+                    }},
+                {"avgSeats": {
+                        "AVG": "rooms_seats"
+                    }
+                }
+            ]
+        }
+    },
+    "query1":{"WHERE": {"IS": {"courses_dept": "cpsc"} }, "OPTIONS": {"COLUMNS": ["courses_dept", "courses_id"], "ORDER": "courses_id"} }
+}

@@ -1,0 +1,18 @@
+{
+    "title": "SELECT audit WHERE audit is 0 ",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "courses_audit": 0
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_audit"
+            ],
+            "ORDER": "courses_audit"
+        }
+    },
+    "isQueryValid": false,
+    "result": "ResultTooLargeError"
+}

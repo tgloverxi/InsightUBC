@@ -1,0 +1,53 @@
+{
+    "title": "test AVG with null room fields",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "courses_dept": "*ps*"
+                    }
+                },
+                {
+                    "GT": {
+                        "courses_pass": 150
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "maxPass",
+                "avgPass"
+
+            ],
+            "ORDER": {
+                "dir": "UP",
+                "keys": [
+                    "courses_dept",
+                    "maxPass"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_dept"
+            ],
+            "APPLY": [
+                {
+                    "avgPass": {
+                        "AVG": "courses_pass"
+                    }
+                },
+                {
+                    "maxPass": {
+                        "MAX": "courses_pass"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_dept":"apsc","maxPass":810,"avgPass":347.15},{"courses_dept":"caps","maxPass":583,"avgPass":370.57},{"courses_dept":"cnps","maxPass":214,"avgPass":175.14},{"courses_dept":"cpsc","maxPass":966,"avgPass":254.86},{"courses_dept":"epse","maxPass":185,"avgPass":185},{"courses_dept":"psyc","maxPass":2289,"avgPass":342.46}]
+}

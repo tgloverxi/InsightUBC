@@ -1,0 +1,18 @@
+{
+    "title": "SELECT uuid WHERE uuid is 12204",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_uuid": "12204"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_uuid"
+            ],
+            "ORDER": "courses_uuid"
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_uuid":"12204"}]
+}

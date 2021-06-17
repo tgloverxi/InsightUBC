@@ -1,0 +1,16 @@
+{
+    "title": "options is other type",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg":97
+            }
+        },
+        "OPTIONS": [
+                "courses_dept",
+                "courses_avg"
+            ]
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

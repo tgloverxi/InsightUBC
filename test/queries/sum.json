@@ -1,0 +1,20 @@
+{
+    "title": "",
+    "query": {
+        "WHERE": {
+            "IS": {"courses_dept": "cpsc"}
+        },
+        "OPTIONS": {
+            "COLUMNS": ["courses_dept", "sum"]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_dept"],
+            "APPLY": [
+                {"sum": {"SUM": "courses_avg"}}
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_dept":"cpsc","sum":86189.91}]
+
+}

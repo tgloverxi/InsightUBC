@@ -1,0 +1,20 @@
+{
+    "title": "",
+    "query": {
+        "WHE": {
+            "NOT": {
+                "LT":{
+                    "courses_avg":99.1
+                }
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": []
+}

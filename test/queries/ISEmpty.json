@@ -1,0 +1,19 @@
+{
+    "title": "empty IS",
+    "query": {
+        "WHERE": {
+            "IS": {
+                
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_year",
+                "courses_title"
+            ],
+            "ORDER": "courses_year"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

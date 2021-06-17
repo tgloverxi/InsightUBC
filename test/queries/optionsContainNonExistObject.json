@@ -1,0 +1,20 @@
+{
+    "title": "OPTIONS contain unknown command",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg":97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg",
+            "MYTEST": "test!!!"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

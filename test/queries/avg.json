@@ -1,0 +1,19 @@
+{
+    "title": "",
+    "query": {
+        "WHERE": {
+            "IS": {"courses_dept": "cpsc"}
+        },
+        "OPTIONS": {
+            "COLUMNS": ["courses_dept", "Avg"]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_dept"],
+            "APPLY": [
+                {"Avg": {"AVG": "courses_avg"}}
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_dept":"cpsc","Avg":77.58}]
+}

@@ -1,0 +1,19 @@
+{
+    "title": "get rooms in ESB",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "rooms_shortname": "ESB"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_fullname",
+                "rooms_number"
+            ],
+            "ORDER": "rooms_number"
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_fullname":"Earth Sciences Building","rooms_number":"1012"},{"rooms_fullname":"Earth Sciences Building","rooms_number":"1013"},{"rooms_fullname":"Earth Sciences Building","rooms_number":"2012"}]
+}

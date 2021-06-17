@@ -1,0 +1,24 @@
+{
+    "title": "SELECT shortname, max of seats WHERE apply has one empty object which is invalid",
+    "query": {
+        "WHERE": {
+            "LT": {
+                "rooms_lon": 1000
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_address"
+            ],
+            "ORDER": {
+                "keys": [
+                    "rooms_address"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": "rooms_address"
+
+    },
+    "isQueryValid": false,
+    "result": []
+}

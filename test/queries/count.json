@@ -1,0 +1,20 @@
+{
+    "title": "",
+    "query": {
+        "WHERE": {
+            "IS": {"courses_dept": "cpsc"}
+        },
+        "OPTIONS": {
+            "COLUMNS": ["courses_dept", "count"]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_dept"],
+            "APPLY": [
+                {"count": {"COUNT": "courses_avg"}}
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_dept":"cpsc","count":621}]
+
+}

@@ -1,0 +1,30 @@
+{
+    "title": "AND other type beside array",
+    "query": {
+        "WHERE": {
+            "AND":{"first_element":
+                {
+                    "GT": {
+                        "courses_avg":90
+                    }
+                },
+                "second_element":
+                {
+                    "IS": {
+                        "courses_dept":"adhe"
+                    }
+                }
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

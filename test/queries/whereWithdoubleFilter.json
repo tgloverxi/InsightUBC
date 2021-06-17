@@ -1,0 +1,40 @@
+{
+    "title": "filter with double LOGIC",
+    "query": {
+        "WHERE": {
+            "OR": [
+                {
+                    "GT" : {
+                        "courses_avg":97
+                    }
+                },
+                {
+                    "EQ" : {
+                        "courses_avg": 80 
+                    }
+                }
+            ],
+            "AND": [
+                {
+                    "GT": {
+                        "courses_avg":90
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept":"adhe"
+                    }                    
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

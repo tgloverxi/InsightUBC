@@ -1,0 +1,36 @@
+{
+    "title": "SELECT shortname, max of seats WHERE furniture contains 'Tables' and seats > 300 and dir = UP",
+    "query": {
+        "WHERE": {
+            "AND": [{
+                "IS": {
+                    "rooms_furniture": "*Tables*"
+                }
+            }, {
+                "GT": {
+                    "rooms_seats": 300
+                }
+            }]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname",
+                "maxSeats",
+                "rooms_address"
+            ],
+            "ORDER": {
+                "dir": 2
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["rooms_shortname"],
+            "APPLY": [{
+                "maxSeats": {
+                    "MAX": "rooms_seats"
+                }
+            }]
+        }
+    },
+    "isQueryValid": false,
+    "result":[]
+}

@@ -1,0 +1,20 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97 and pass > 0",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg":97,
+                "courses_pass" : 0
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

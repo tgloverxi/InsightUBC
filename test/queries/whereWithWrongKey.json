@@ -1,0 +1,20 @@
+{
+    "title": "where with wrong key",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "avg":97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg",
+                "courses_test"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

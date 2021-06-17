@@ -1,0 +1,43 @@
+{
+    "title": "",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "rooms_seats": 440
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_address",
+                "minSeats"
+            ],
+            "ORDER": "minSeats"
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_fullname",
+                "rooms_address"
+            ],
+            "APPLY": [
+                {
+                    "minSeats": {
+                        "MIN": "rooms_seats"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "rooms_address": "6108 Thunderbird Boulevard",
+            "minSeats": 442
+        },
+        {
+            "rooms_address": "2194 Health Sciences Mall",
+            "minSeats": 503
+        }
+    ]
+}
+
+

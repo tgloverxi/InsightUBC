@@ -1,0 +1,18 @@
+{
+    "title": "SELECT title WHERE title is intr anth gender",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_title": "intr anth gender"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title"
+            ],
+            "ORDER": "courses_title"
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_title":"intr anth gender"},{"courses_title":"intr anth gender"},{"courses_title":"intr anth gender"},{"courses_title":"intr anth gender"},{"courses_title":"intr anth gender"},{"courses_title":"intr anth gender"},{"courses_title":"intr anth gender"},{"courses_title":"intr anth gender"}]
+}

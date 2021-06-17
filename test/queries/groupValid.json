@@ -1,0 +1,50 @@
+{
+    "title": "group valid check",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "rooms_furniture": "*Tables*"
+                    }
+                },
+                {
+                    "GT": {
+                        "rooms_seats": 300
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname",
+                "rooms_fullname",
+                "rooms_furniture",
+                "maxSeats"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "maxSeats",
+                    "rooms_fullname"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_shortname",
+                "rooms_fullname",
+                "rooms_furniture"
+            ],
+            "APPLY": [
+                {
+                    "maxSeats": {
+                        "MAX": "rooms_seats"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_shortname":"OSBO","rooms_fullname":"Robert F. Osborne Centre","rooms_furniture":"Classroom-Movable Tables & Chairs","maxSeats":442},{"rooms_shortname":"HEBB","rooms_fullname":"Hebb","rooms_furniture":"Classroom-Fixed Tables/Fixed Chairs","maxSeats":375},{"rooms_shortname":"LSC","rooms_fullname":"Life Sciences Centre","rooms_furniture":"Classroom-Fixed Tables/Movable Chairs","maxSeats":350}]
+}

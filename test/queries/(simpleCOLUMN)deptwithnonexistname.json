@@ -1,0 +1,18 @@
+{
+    "title": "SELECT dept WHERE dept is CPSC",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_dept": "CPSC"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept"
+            ],
+            "ORDER": "courses_dept"
+        }
+    },
+    "isQueryValid": true,
+    "result":[]
+}

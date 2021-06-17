@@ -1,0 +1,17 @@
+{
+    "title": "SELECT dept WHERE dept is none",
+    "query": {
+        "WHERE": {
+            "IS": {
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept"
+            ],
+            "ORDER": "courses_dept"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

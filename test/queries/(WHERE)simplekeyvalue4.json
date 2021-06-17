@@ -1,0 +1,19 @@
+{
+    "title": "empty SELECT  WHERE dept is stay, unadded value ",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "": "stay"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

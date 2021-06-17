@@ -1,0 +1,34 @@
+{"title": "",
+    "query": {
+        "WHERE": {
+            "LT": {
+                "rooms_seats": 100
+            }
+        }
+    ,
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_fullname",
+                "rooms_shortname",
+                "rooms_address",
+                "rooms_lat"
+            ],
+            "ORDER": "minFail"
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_fullname",
+                "rooms_shortname"
+            ],
+            "APPLY": [
+                {
+                    "minFail": {
+                        "MIN": "rooms_lat"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

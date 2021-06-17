@@ -1,0 +1,28 @@
+{
+    "title": "double wildcard",
+    "query": {
+        "WHERE": {
+            "AND": [
+              {
+                "IS": {
+                    "courses_dept": "**"
+                }
+              },
+              {
+                "GT": {
+                  "courses_year": 2014
+                }
+              }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_year",
+                "courses_dept"
+            ],
+            "ORDER": "courses_year"
+        }
+    },
+    "isQueryValid": false,
+    "result": "ResultTooLargeError"
+}

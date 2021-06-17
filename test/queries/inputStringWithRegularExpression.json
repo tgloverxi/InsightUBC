@@ -1,0 +1,28 @@
+{
+    "title": "regular expression in input string",
+    "query": {
+        "WHERE": {
+            "AND": [
+              {
+                "IS": {
+                    "courses_dept": "^[^c]psc$"
+                }
+              },
+              {
+                "GT": {
+                  "courses_year": 2014
+                }
+              }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_year",
+                "courses_dept"
+            ],
+            "ORDER": "courses_year"
+        }
+    },
+    "isQueryValid": true,
+    "result": []
+}

@@ -1,0 +1,25 @@
+{
+    "title": "double WHERE",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg":97
+            }
+        },
+        "WHERE": {
+            "EQ": {
+                "courses_avg":97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_dept":"crwr","courses_avg":97},{"courses_dept":"epse","courses_avg":97},{"courses_dept":"psyc","courses_avg":97}]
+}
+

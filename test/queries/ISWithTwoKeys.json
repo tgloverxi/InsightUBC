@@ -1,0 +1,20 @@
+{
+    "title": "two keys in IS",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_title": "harmonic anal i",
+                "courses_dept": "math"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_year",
+                "courses_title"
+            ],
+            "ORDER": "courses_year"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

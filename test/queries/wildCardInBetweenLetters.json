@@ -1,0 +1,28 @@
+{
+    "title": "wildcard in between letters",
+    "query": {
+        "WHERE": {
+            "AND": [
+              {
+                "IS": {
+                    "courses_dept": "c*c"
+                }
+              },
+              {
+                "GT": {
+                  "courses_year": 2014
+                }
+              }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_year",
+                "courses_dept"
+            ],
+            "ORDER": "courses_year"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

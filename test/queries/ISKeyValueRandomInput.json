@@ -1,0 +1,19 @@
+{
+    "title": "key value in IS, random input",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_dept": "wefiowjfoie" 
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_year",
+                "courses_title"
+            ],
+            "ORDER": "courses_year"
+        }
+    },
+    "isQueryValid": true,
+    "result": []
+}

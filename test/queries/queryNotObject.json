@@ -1,0 +1,6 @@
+{
+    "title": "SELECT audit, avg WHERE avg > 97",
+    "query": null,
+    "isQueryValid": false,
+    "result": "InsightError"
+}

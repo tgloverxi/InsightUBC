@@ -1,0 +1,19 @@
+{
+    "title": "SELECT dept, avg WHERE fail < 30",
+    "query": {
+        "WHERE": {
+            "LT": {
+                "courses_instructor": "alex"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

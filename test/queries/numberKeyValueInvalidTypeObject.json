@@ -1,0 +1,19 @@
+{
+    "title": "key required number but value is object",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": { "LT": {"courses_year": 1999}}
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

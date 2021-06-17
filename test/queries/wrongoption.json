@@ -1,0 +1,15 @@
+{
+    "title": "",
+    "query": {
+        "WHERE": {
+            "NOT": {
+                "LT":{
+                    "courses_avg":99.1
+                }
+            }
+        },
+        "OPTIONS": "ieow"
+    },
+    "isQueryValid": false,
+    "result": []
+}

@@ -1,0 +1,12 @@
+{
+    "title": "Very invalid query",
+    "query": {
+        "OPTIONS": {
+            "COLUMNS": [
+        "courses_audit",
+        "courses_avg"
+    ]
+    } },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

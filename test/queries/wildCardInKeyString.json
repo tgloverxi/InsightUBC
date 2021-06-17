@@ -1,0 +1,28 @@
+{
+    "title": "wildcard in key string",
+    "query": {
+        "WHERE": {
+            "AND": [
+              {
+                "IS": {
+                    "courses_*": "cpsc"
+                }
+              },
+              {
+                "GT": {
+                  "courses_year": 2014
+                }
+              }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_year",
+                "courses_dept"
+            ],
+            "ORDER": "courses_year"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

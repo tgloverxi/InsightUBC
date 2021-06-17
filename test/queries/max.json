@@ -1,0 +1,19 @@
+{
+    "title": "",
+    "query": {
+        "WHERE": {
+            "IS": {"courses_dept": "cpsc"}
+        },
+        "OPTIONS": {
+            "COLUMNS": ["courses_dept", "maxAvg"]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_dept"],
+            "APPLY": [
+                {"maxAvg": {"MAX": "courses_avg"}}
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_dept":"cpsc","maxAvg":95}]
+}
